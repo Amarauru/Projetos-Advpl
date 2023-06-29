@@ -1,0 +1,76 @@
+
+Tabela Genérica
+- Serve como uma tabela mais simples, de forma que é chamada com mais facildidade e praticidade
+- preenche o nome de uma tabela, suas chaves e os seus conteudos
+- é chamada diretamente na opção inclusão de consultas padrões na parte de adicionar campos
+
+
+- Perguntas
+- podem ser cadastradas no configurador e posteriormente chamadas no codigo
+
+- Bloco de codigo (EVAL) (verificar)
+
+
+
+Funcões importantes:
+- FwinputBox
+- GetMV(" ") busca o um parametro especifico 
+- PutMv(" ", ) põe um parametro novo
+- (procurar sobre MV_PAR)
+- VAL - Val( < cString > ), Converte uma sequência de caracteres que contêm dígitos em um valor numérico.
+
+- SUBSTRING - SubStr( < cText >, < nIndex >, [ nLen ] ), 
+ cText, Indica a string que será tratada.
+ nIndex,Indica o indice inicial da string <cText>.
+ nLen,Indica o número de caracteres que retornará a partir de <nIndex>.
+
+- LEFT/RIGHT
+- PADR/L
+- STR - Realiza a conversão de uma informação do tipo numérico em uma string, adicionando espaços à direita.
+
+
+
+- VALTOCHAR - , converte a variável para caractere
+- VAL - , converte a variável de caractere para numerica
+- ValType(insira a variável), retorna o tipo da variável.
+
+- IIF - IIF( <expressão lógica>,  <expressão 1>, <expressão 2>)
+A função IIF() é utilizada para o processamento condicional de uma expressão, de acordo com uma condição especificada através da expressão lógica. 
+    Se a expressão lógica for avaliada como verdadeira (.T.), a expressão 1 será processada. 
+    Se a expressão lógica for avaliada como falsa (.F.), a expressão 2 será processada.
+    
+- MSGBOX - verificar sintaxe
+- AVISO - verificar
+- DATE e manipulação de data - verificar
+
+
+
+dúvidas: 
+
+// - MacroSubstituiçõesb OK!
+//- Diretivas de Compilação OK!
+- Funções de acesso e manipulação de dados(Entendi o dbseek, o dbselect area e o dbsetorder)   
+    //DBSEEK e DBGOTO são formas de posicionar num determinado registro do sistema (pesquisar para definir melhor)
+
+
+
+
+- Gatilho
+- Bloco de códigos, EVAL etc
+- Pontos de Entrada - Servem como uma verificação padrão do proprio protheus para saber se a fonte especifica ou alguma condição existe e se existe, executa-la
+- Manipulação de arquivos
+
+Processo de conexão em outra maquina/base
+
+
+
+
+
+
+
+p mostrar
+- Cadastro de Tabela
+- Cadastro de Campos
+- Cadastro de indices
+- Cadastro de gatilhos
+- Cadastros de Consulta padrão
