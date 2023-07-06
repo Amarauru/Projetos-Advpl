@@ -17,7 +17,7 @@
 	//	MSGINFO("not found",)
 	//endif
 	//Não precisa posicionar nem pesquisar o campo cp_obs, pois ele já está aberto pq estava posicionado no browser(o que está posicionado já é armazenado)
-	//então é só armazenar justamente uma variável com as informações e passar com altrim, retirando os campos e pesquisando parecido.
+	//então é só armazenar justamente uma variávrel com as informações e passar com altrim, retirando os campos e pesquisando parecido.
 
 	DBSELECTAREA('ZPP')
 	ZPP->(DBSETORDER(1))

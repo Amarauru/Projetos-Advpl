@@ -81,7 +81,7 @@ Static Function fImporta()
  
             //Enquanto tiver linhas
             While (oArquivo:HasLine())
- 
+
                 //Incrementa na tela a mensagem
                 nLinhaAtu++
                 IncProc("Analisando linha " + cValToChar(nLinhaAtu) + " de " + cValToChar(nTotLinhas) + "...")

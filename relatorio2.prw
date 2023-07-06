@@ -6,7 +6,7 @@ User Function frelatexcel()
 local cQuery:= ""
 local aDados:= {}
 local cAlias:= getNextAlias()
-Local oExcel := FWMSEXCEL():New()
+Local oExcel := FWMSEXCEL():New() //atribuindo oExcel, a classe FWMSEXCEL e chamando o metodo construtor New
 local cAba:= "Manutenção de Alunos"
 local cTabela:= "Manutenção de Alunos"
 local cArquivo:= "Manutenção de Alunos" + ".XMS"

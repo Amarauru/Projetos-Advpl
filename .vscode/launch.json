@@ -7,9 +7,105 @@
 			"name": "TOTVS Language Debug",
 			"program": "${command:AskForProgramName}",
 			"cwb": "${workspaceFolder}",
-			"smartclientBin": "../totvs/bin/smartclient/smartclient.exe",
+			"smartclientBin": "C:\\TOTVS.12127\\Protheus\\Protheus\\bin\\smartclient\\smartclient.exe",
 			"isMultiSession": true,
 			"enableTableSync": true
 		}
-	]
+	],
+	"lastPrograms": [
+		{
+			"label": "u_fSeparaNum"
+		},
+		{
+			"label": "u_opamundo"
+		},
+		{
+			"label": "u_somanotas"
+		},
+		{
+			"label": "u_teste"
+		},
+		{
+			"args": [
+				"ício Array"
+			],
+			"label": "u_Exerc"
+		},
+		{
+			"label": "u_fArray"
+		},
+		{
+			"label": "u_fteste"
+		},
+		{
+			"label": "u_Exemplo"
+		},
+		{
+			"label": "u_faArray"
+		},
+		{
+			"label": "u_macro"
+		},
+		{
+			"label": "u_fMacro"
+		},
+		{
+			"label": "u_zImpCSV"
+		},
+		{
+			"label": "SIGAMDI"
+		},
+		{
+			"label": "SIGACFG"
+		},
+		{
+			"label": "SIGAATF"
+		},
+		{
+			"label": "exercicio2array"
+		},
+		{
+			"label": "exercArray"
+		},
+		{
+			"label": "u_exercArray"
+		},
+		{
+			"label": "U_xImpCSV"
+		},
+		{
+			"label": "u_zImpoCSV"
+		},
+		{
+			"label": "sigagfe"
+		},
+		{
+			"label": "funcaofornecedor.prw"
+		},
+		{
+			"label": "u_exerc3"
+		},
+		{
+			"label": "u_parametro"
+		},
+		{
+			"label": "u_fparametro"
+		},
+		{
+			"label": "u_fVetorTeste"
+		},
+		{
+			"label": "u_MBrwZZP"
+		},
+		{
+			"label": "u_exerc5"
+		},
+		{
+			"label": "u_zTeste"
+		},
+		{
+			"label": "u_SolMat"
+		}
+	],
+	"lastProgramExecuted": "SIGAATF"
 }

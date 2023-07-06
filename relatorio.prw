@@ -34,7 +34,7 @@ ZPP_MEDIA,
 ZPP_PROF,
 IIF(ZPP_MEDIA>=7, 'Aprovado','Reprovado') AS SITUACAO 
 from %table:ZPP% ZPP  
-WHERE ZPP.%notDel%
+WHERE ZPP.%notDel%s
 
 EndSQL
 
@@ -53,7 +53,6 @@ local oReport
 local oSection1
 //local cPosit := " "
 //local cAprovacao
-local bbloco1
 //local cor 
 //local aArray :={}
 Pergunte(cPerg, .f.)
@@ -62,6 +61,7 @@ oReport := TReport():New('RCOMR02',cTitle,cPerg,{|oReport|ReportPrint(oReport,cA
 
 //Primeira sessão
 oSection1 := TRSection():New(oReport,"Cadastro de Alunos",{cAlias})
+
 //as buscas e preenchimentos das celulas podem ser realizadas passando por query ou como bloco de codigo, como segue o exemplo
 //Parametros do TRCell: 
 //TRCell():New( <oParent> , <cName> , <cAlias> , <cTitle> , <cPicture> , <nSize> , <lPixel> , <bBlock> , <cAlign> , <lLineBreak> , <cHeaderAlign> , <lCellBreak> , <nColSpace> , <lAutoSize> , <nClrBack> , <nClrFore> , <lBold> )
@@ -73,14 +73,12 @@ ocell:= TRCell():New(oSection1,"ZPP_STSMAT", cAlias, "Situação do Material")
 
 //ocell:= TRCell():New(oSection1,"SITUACAO", cAlias, "Situação")
 
-
-//bbloco1:= {||IIF(ZPP_MEDIA>=7, 'Aprovado','Reprovado')}
-
+//tentar por bloco de código
+//bbloco1:= {||IIF(ZPP_MEDIA>=7, 'Aprovado','Reprovado')
 //Alert (Eval(bbloco1))
 //ocellSit:= TRCell():New(oSection1,"SITA",,"Situação",,,,bbloco1,"CENTER",,,,,,,CLR_BLUE,.T.)
 ocellSit:= TRCell():New(oSection1,"SITUACAO", cAlias, "Situação")
 //definindo mais uma array, recebendo SITUACAO como query, e verificando se SITUACAO tem aprov ou reprov e passando o fundo e a cor da fonte
-
 aAdd(oSection1:Cell("SITUACAO"):aFormatCond, {"SITUACAO='Aprovado'" ,,CLR_BLUE})
 aAdd(oSection1:Cell("SITUACAO"):aFormatCond, {"SITUACAO='Reprovado'" ,,CLR_RED})
 

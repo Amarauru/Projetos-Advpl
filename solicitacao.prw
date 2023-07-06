@@ -7,7 +7,9 @@ User Function fSolMat()
 	local aArea := GetArea()
 	Local aCab := {}
 	Local aAuto := {}
-	local cItens := GETMV("AZ_SOLMAT")
+	local cItens := GETMV("AZ_SOLMAT") //Pode usar SuperGETMV
+	local aProd := {}
+	local aLinha:= {}
 	Private lMsErroAuto := .F.
 /*
 For nX := 1 to 2
@@ -31,15 +33,15 @@ aadd(aCab,{GetSxeNum("SCP","CP_NUM"),,dtoc(dDataBase)}) //Cabecalho
 //Selecionando a área e posicionando os indices
 	Dbselectarea("SB1")
 	Dbsetorder(1)
-//quebrando a strinsg em array
-	cItens := StrTokArr(cItens, ';')
+	//quebrando a strings  em array
 	//array recebendo os itens quebrados
-	aLinha := {cItens}
+	aProd := StrTokArr(cItens, ';') //pode se usar separa()
+	
 	///procurando e setando a tabela sb1, o produto e retirando os espaços
 	If SB1->(DbSeek(xFilial("SB1")+PadR("04", tamsx3('CP_PRODUTO') [1])))
 	//alimentando os campos necessários para o execauto
-		aadd(aLinha,{"CP_PRODUTO",cItens[1], Nil})
-		aadd(aLinha,{"CP_QUANT",Val(cItens[2]), Nil})
+		aadd(aLinha,{"CP_PRODUTO",aProd[1], Nil})
+		aadd(aLinha,{"CP_QUANT",Val(aProd[2]), Nil})
 		aadd(aLinha,{"CP_OBS", ALLTRIM(ZPP->ZPP_ALUNOS), Nil})
 		//aauto recebe aLinha
 		aAdd(aAuto,aLinha)
@@ -73,7 +75,6 @@ Return
 - Os materiais solicitados deverão ser obtidos via parâmetro ou consulta genérica.??
 
 2. No momento da baixa dessa requisição, o sistema deverá atualizar o campo de situação da solicitação de material, no cadastro do aluno.??
-
 
 Sugestões:
 
