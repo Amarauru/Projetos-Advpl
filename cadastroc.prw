@@ -15,8 +15,5 @@ User Function fcadccalu()
 //Campos dos Alunos: ZPP_CODALU, ZPP_ALUNOS
 
 
-
-
-
 Return 
 //pesquisar protheusdoc

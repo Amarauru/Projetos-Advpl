@@ -84,17 +84,6 @@ ZPP_CODSOL
 */
 User Function fcli()
 
-IIF( LEN(M->ZPP_CODALU) < 6, ,MsgINFO("Código deve ser menor que 6 digitos",))
-IIF( LEN(M->ZPP_ALUNOS) < 16, ,MsgINFO("Nome deve ser menor que 16 digitos",))
-IIF( LEN(M->ZPP_NASCME) < 8, ,MsgINFO("Data de Nascimento deve ser menor que 8 digitos",))
-IIF( LEN(M->ZPP_DA) < 2, ,MsgINFO("Deve ser menor que 2 digitos",))
-IIF( LEN(M->ZPP_NOTAS1) < 3, ,MsgINFO("Nota deve ser menor que 3 digitos",))
-IIF( LEN(M->ZPP_NOTAS2 ) < 3, ,MsgINFO("Nota deve ser menor que 3 digitos",))
-
-IIF( LEN(M->ZPP_CODPF) < 10, ,MsgINFO("Código deve ser menor que 6 digitos",))
-IIF( LEN(M->ZPP_PROF) < 24, ,MsgINFO("Nome deve ser menor que 24 digitos",))
-IIF( LEN(M->ZPP_PROF) < 24, ,MsgINFO("Nome deve ser menor que 24 digitos",))
-
 RECLOCK( ZPP, .T. )
 ZPP_CODALU := M->ZPP_CODALU
 ZPP_ALUNOS := M->ZPP_ALUNOS

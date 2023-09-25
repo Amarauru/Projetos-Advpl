@@ -64,7 +64,9 @@ oSection1 := TRSection():New(oReport,"Cadastro de Alunos",{cAlias})
 
 //as buscas e preenchimentos das celulas podem ser realizadas passando por query ou como bloco de codigo, como segue o exemplo
 //Parametros do TRCell: 
+
 //TRCell():New( <oParent> , <cName> , <cAlias> , <cTitle> , <cPicture> , <nSize> , <lPixel> , <bBlock> , <cAlign> , <lLineBreak> , <cHeaderAlign> , <lCellBreak> , <nColSpace> , <lAutoSize> , <nClrBack> , <nClrFore> , <lBold> )
+
 ocell1:= TRCell():New(oSection1,"ZPP_CODALU", cAlias, "Código do Aluno",,,,,"CENTER",,,,,,,,)
 ocell:= TRCell():New(oSection1,"ZPP_ALUNOS", cAlias, "Nome do Aluno")
 ocell:= TRCell():New(oSection1,"ZPP_MEDIA", cAlias, "Média do Aluno",,,,,"CENTER",,,,,,,,)
@@ -77,8 +79,10 @@ ocell:= TRCell():New(oSection1,"ZPP_STSMAT", cAlias, "Situação do Material")
 //bbloco1:= {||IIF(ZPP_MEDIA>=7, 'Aprovado','Reprovado')
 //Alert (Eval(bbloco1))
 //ocellSit:= TRCell():New(oSection1,"SITA",,"Situação",,,,bbloco1,"CENTER",,,,,,,CLR_BLUE,.T.)
+
 ocellSit:= TRCell():New(oSection1,"SITUACAO", cAlias, "Situação")
 //definindo mais uma array, recebendo SITUACAO como query, e verificando se SITUACAO tem aprov ou reprov e passando o fundo e a cor da fonte
+
 aAdd(oSection1:Cell("SITUACAO"):aFormatCond, {"SITUACAO='Aprovado'" ,,CLR_BLUE})
 aAdd(oSection1:Cell("SITUACAO"):aFormatCond, {"SITUACAO='Reprovado'" ,,CLR_RED})
 
@@ -93,6 +97,7 @@ aAdd(oSection1:Cell("SITUACAO"):aFormatCond, {"SITUACAO='Reprovado'" ,,CLR_RED})
 
 //ocell:= TRCell():New(oSection1,Cell("Média"):SetBlock(aARRAY[1]))
 //as informações já foram percorridas pela query, então é só utilizar os valores com alguma lógica de laço e lançar nas celulas
+
 //aAdd(oSection1:Cell("E1_VALOR"):aFormatCond, {"E1_VALOR > 100 .and. E1_VALOR < 1000" ,,CLR_GREEN})
 //aAdd(oSection1:Cell("E1_VALOR"):aFormatCond, {"E1_VALOR >= 1000" ,CLR_HGRAY,CLR_RED})
 //aAdd(oSection1:Cell("E1_VALOR"):aFormatCond, {"E1_VALOR >= "+cvaltochar(MV_PAR01) ,,CLR_RED})
